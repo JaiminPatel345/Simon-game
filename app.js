@@ -47,8 +47,6 @@ function leverUp(){
 
 }
 
-
-
 function Check(){
     if(!start) return;
     
@@ -81,13 +79,18 @@ function gameOver(){
     } , 500);
 
     text.innerText = "Press any key to RESTART the game / Press  \" A \" ";
+    
+
+    let h2 = document.createElement("h2");
+    h2.innerText = `Score : ${level-1}`
+    text.append(h2);
+
+
     start = false;
     level =0;
     gameSeq = [];
  
 }
-
-
 
 for(let btn of btns){
     btn.addEventListener("click" , Check);

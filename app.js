@@ -1,5 +1,4 @@
 let gameSeq =[];
-let userSeq=[];
 let btns = document.querySelectorAll(".box");
 let text = document.querySelector("h3");
 let start = false;
@@ -27,7 +26,7 @@ document.addEventListener("keypress" , function(){
 function gameFlesh(num){
 
     let box = document.querySelector(`#b${num}`);
-    console.log(num);
+    // console.log(num);
     box.style.backgroundColor = "white";
 
     setTimeout(function(){
@@ -44,7 +43,7 @@ function leverUp(){
     let num = Math.floor(Math.random()*4)+1 ;
     gameFlesh(num);  
     gameSeq.push(`b${num}`);
-    console.log(gameSeq);
+    // console.log(gameSeq);
 
 }
 
@@ -54,11 +53,10 @@ function Check(){
     if(!start) return;
     
     let btn = this;
-    userSeq.push(btn.id);
     
 
-    console.log(btn.id);
-    console.log(gameSeq[idx]);
+    // console.log(btn.id);
+    // console.log(gameSeq[idx]);
 
 
     if(btn.id == gameSeq[idx]){
@@ -82,7 +80,7 @@ function gameOver(){
         document.body.style.backgroundColor = "";
     } , 500);
 
-    text.innerText = "Press any key to RESTART the game";
+    text.innerText = "Press any key to RESTART the game / Press  \" A \" ";
     start = false;
     level =0;
     gameSeq = [];

@@ -11,6 +11,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.5s;
     
 }
 
@@ -38,9 +39,13 @@ body{
 }
 
 #b3{
-    background-color: rgb(90, 49, 170);
+    background-color: rgb(98, 64, 166);
 }
 
 #b4{
-    background-color: rgb(202, 36, 36);
+    background-color: rgb(181, 63, 63);
+}
+
+.box:active{
+    box-shadow:  0 0 10px 10px rgba(51, 170, 225, 0.4);
 }
